@@ -68,25 +68,22 @@
     border-color: var(--accent-dim);
   }
   .card-icon {
-    width: 72px;
-    height: 72px;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 16px;
+    overflow: hidden;
     margin-bottom: 20px;
     transition: transform 0.25s ease;
   }
   .card:hover .card-icon {
-    transform: scale(1.1);
+    transform: scale(1.12);
   }
-  .card-icon svg {
-    width: 38px;
-    height: 38px;
+  .card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
   }
-  .card-icon.blue   { background: rgba(108,140,255,0.15); }
-  .card-icon.green  { background: rgba(74,222,128,0.15); }
-  .card-icon.purple { background: rgba(167,139,250,0.15); }
 
   .card-title {
     font-size: 15px;
@@ -111,37 +108,24 @@
 <div class="cards">
 
   <a class="card" href="autointerp_report.html">
-    <div class="card-icon blue">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#6c8cff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-        <polyline points="14 2 14 8 20 8"/>
-        <line x1="16" y1="13" x2="8" y2="13"/>
-        <line x1="16" y1="17" x2="8" y2="17"/>
-        <polyline points="10 9 9 9 8 9"/>
-      </svg>
+    <div class="card-icon">
+      <img src="assets/icon_autointerp.png" alt="Autointerp Report">
     </div>
     <div class="card-title">Autointerp Report</div>
     <div class="card-desc">Automated interpretability scores and feature descriptions</div>
   </a>
 
   <a class="card" href="max_activating_examples.html">
-    <div class="card-icon green">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-      </svg>
+    <div class="card-icon">
+      <img src="assets/icon_max_activating_examples.png" alt="Max-Activating Examples">
     </div>
     <div class="card-title">Max-Activating Examples</div>
     <div class="card-desc">Top activating tokens and context for each feature</div>
   </a>
 
   <a class="card" href="max_activating_midfreq_high_act.html">
-    <div class="card-icon purple">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="3" width="7" height="7" rx="1"/>
-        <rect x="14" y="3" width="7" height="7" rx="1"/>
-        <rect x="3" y="14" width="7" height="7" rx="1"/>
-        <rect x="14" y="14" width="7" height="7" rx="1"/>
-      </svg>
+    <div class="card-icon">
+      <img src="assets/icon_max_activating_midfreq_high_act.png" alt="Mid-Freq, High Activation">
     </div>
     <div class="card-title">Mid-Freq, High Activation</div>
     <div class="card-desc">Max-activating examples filtered for mid-frequency, high-activation features</div>
